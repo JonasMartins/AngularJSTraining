@@ -1,0 +1,10 @@
+dicas angular js, 
+para instalar basta ter instalado o node js e depois executar o comando
+para ver a versão de node js: node -v
+depois: 
+sudo npm install -g angular-cli
+para criar um projeto:
+ng new 'project-name'
+
+rodar projeto:
+ng serve
