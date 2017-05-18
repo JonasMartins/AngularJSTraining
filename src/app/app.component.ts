@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
 
   selector: 'app-root',
   templateUrl: './app.component.html',
+  // template: `
+  //   <app-other></app-other>
+  //   <app-another></app-another>
+  // `,
   styleUrls: ['./app.component.css']
 })
 
