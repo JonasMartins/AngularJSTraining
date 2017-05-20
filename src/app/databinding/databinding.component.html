@@ -1,0 +1,27 @@
+<h2>String interpolation</h2>
+<p>
+  {{stringInterpolation}}
+
+  <!-- number casting into string -->
+  {{numberInterpolation}}
+</p>
+<hr>
+<h2>Property biding</h2>
+<input type="text" value="{{stringInterpolation}}">
+<br><br><br>
+<input type="text" [value]="stringInterpolation">
+
+<p [ngClass]="{redBorder: true}">
+  Esse paragrafo é stilizado através do ngClass que recebe um objeto js como argumento
+no caso passamos uma classe de css para demonstração. </p>
+
+<p [ngClass]="{redBorder: onTest()}">
+  Mesma coisa agora com uma função retornando true para a propriedade redBorder. </p>
+
+<p [ngStyle]="{color: 'green'}">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
