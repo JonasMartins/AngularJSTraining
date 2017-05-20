@@ -6,3 +6,9 @@ p {
 h3 {
   color: #ff00b4;
 }
+
+article {
+  font-size: 32px;
+  color: #ff34a9;
+  border: 2px solid #bc48f2;
+}
