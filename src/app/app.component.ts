@@ -15,4 +15,5 @@ import { Component } from '@angular/core';
 /* ROOT COMPONENT */
 export class AppComponent {
   title = 'Change This Dynamically!';
+  delete = false;
 }
