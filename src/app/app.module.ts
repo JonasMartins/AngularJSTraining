@@ -12,6 +12,8 @@ import { EventBindingComponent } from './databinding/event-binding.component';
 import { LifecycleComponent } from './lifecycle.component';
 import { HeaderComponent } from './header.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { RecipesComponent } from './recipes/recipes.component';
     EventBindingComponent,
     LifecycleComponent,
     HeaderComponent,
-    RecipesComponent
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeItemComponent
 
     ],
   imports: [
