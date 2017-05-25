@@ -11,6 +11,7 @@ import { PropertyBindingComponent } from './databinding/property-binding.compone
 import { EventBindingComponent } from './databinding/event-binding.component';
 import { LifecycleComponent } from './lifecycle.component';
 import { HeaderComponent } from './header.component';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './header.component';
     PropertyBindingComponent,
     EventBindingComponent,
     LifecycleComponent,
-    HeaderComponent
+    HeaderComponent,
+    RecipesComponent
 
     ],
   imports: [
