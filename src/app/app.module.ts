@@ -21,11 +21,16 @@ import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.comp
 import { DropdownDirective } from './dropdown.directive';
 import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RecipeStartComponent } from './recipes/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full'},
   { path: 'recipes', component: RecipesComponent},
-  { path: 'shopping-list', component: ShoppingListComponent }
+  { path: 'shopping-list', component: ShoppingListComponent },
+  { path: 'new', component: RecipeEditComponent},
+  { path: ':id', component: RecipeDetailComponent},
+  { path: 'id:edit', component: RecipeEditComponent}
 ];
 
 @NgModule({
@@ -45,6 +50,8 @@ const appRoutes: Routes = [
     ShoppingListComponent,
     ShoppingListAddComponent,
     DropdownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent,
     ],
   imports: [
     BrowserModule,
