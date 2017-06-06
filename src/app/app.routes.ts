@@ -9,6 +9,5 @@ export const APP_ROUTES_PROVIDER = [
     { path: 'recipes', component: RecipesComponent},
     { path: 'shopping-list', component: ShoppingListComponent }
 
-
     ])
 ];
