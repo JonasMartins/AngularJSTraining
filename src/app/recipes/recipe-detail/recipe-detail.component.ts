@@ -18,17 +18,17 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
 
-  constructor(private sls: ShoppingListService, 
+  constructor(private sls: ShoppingListService,
     private route: Router, 
-    private router: ActivatedRoute
-    private recipesService: recipesService = this.recipesService.getRecipe(this.recipeIndex);
+    private router: ActivatedRoute,
+    private recipeService: RecipeService 
     ) { }
 
   ngOnInit() {
     this.subscription =  this.router.params.subscribe(
       (params: any) => {
         this.recipeIndex = params['id'];
-
+        this.selectedRecipe = this.recipeService.getRecipe(this.recipeIndex);
         }
       );
   }
@@ -41,7 +41,7 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
     this.route.navigate(['/recipes', this.recipeIndex, 'edit']);
   }
   onDelete(){
-    this.recipesService.deleteRecipe(this.recipeIndex);
+    this.recipeService.deleteRecipe(this.selectedRecipe);
     this.route.navigate(['/recipes']);
   }
 
