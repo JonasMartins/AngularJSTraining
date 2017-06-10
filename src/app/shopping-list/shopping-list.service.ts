@@ -13,4 +13,8 @@ export class ShoppingListService {
     /* Adicionando todos os items passados por parametro ao array especificado no service */
     Array.prototype.push.apply(this.items, itemsArgument);
   }
+
+  addItem(item: Ingredient){
+    this.items.push(item);
+  }
 }
