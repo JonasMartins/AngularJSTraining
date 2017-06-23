@@ -14,7 +14,7 @@ export class RecipeService {
       [ new Ingredient('French Fries', 2), new Ingredient('Pork Meat', 1)
 
       ]),
-    new Recipe('Buchada', 'Intestines (kidneys, liver and viscera) of a goat', 'http://receitasdecomidas.com.br/wp-content/uploads/buchada-de-bode.jpg',[
+    new Recipe('Buchada', 'Intestines (kidneys, liver and viscera) of a goat', 'https://bigoven-res.cloudinary.com/image/upload/main---wiener-schnitzel-8f03d26e1f0f2601215a7029.jpg',[
       new Ingredient('Goat\'s Intestines', 2), new Ingredient('Boiled Vegetables', 1) ])
   ];
 
