@@ -17,14 +17,18 @@ export class RecipeService {
 
   recipeChanged = new EventEmitter<Recipe[]>();
   
-  private recipes: Recipe[] = [
+  private recipes: Recipe[] = []; /* vazio, sempre tem que buscar antes */
+  /*
     new Recipe('Schnitzel', 'Breaded pork loin', 'https://bigoven-res.cloudinary.com/image/upload/main---wiener-schnitzel-8f03d26e1f0f2601215a7029.jpg',
       [ new Ingredient('French Fries', 2), new Ingredient('Pork Meat', 1)
 
       ]),
     new Recipe('Buchada', 'Intestines (kidneys, liver and viscera) of a goat', 'https://bigoven-res.cloudinary.com/image/upload/main---wiener-schnitzel-8f03d26e1f0f2601215a7029.jpg',[
       new Ingredient('Goat\'s Intestines', 2), new Ingredient('Boiled Vegetables', 1) ])
-  ];
+     ];
+
+   */
+  
 
   constructor(private http: Http) { }
 
@@ -44,7 +48,10 @@ export class RecipeService {
 
   private extractData(res: Response) {
     let body = res.json();
-    return body.data || { };
+    
+    console.log(Array.isArray(body));
+
+    return body || { };
   }
 
   getRecipes(){
@@ -79,7 +86,6 @@ export class RecipeService {
   }
 
   fetchData() {
-    
     return  this.http.get('https://recipebookangular-9e0b9.firebaseio.com/recipes.json').map(
       this.extractData).subscribe(
         (data: Recipe[]) => {

@@ -18,7 +18,7 @@ export class RecipeListComponent implements OnInit {
     this.recipes = this.recipeServiceLocal.getRecipes();
     /* subscribe significa, me informe quando algum evento for disparado */
     this.recipeServiceLocal.recipeChanged.subscribe(
-      (recipes_come_from_srevice: Recipe[]) => this.recipes = recipes_come_from_srevice
+      (recipes: Recipe[]) => this.recipes = recipes
 
       );
   }
